@@ -91,9 +91,9 @@ app.post("/auth-user", async (req, res) => {
     const input = req.body; // before doing this // app.use(express.json());
 
     await dbadduser.authUser(input);
-    res.json({ message: "success post" });
+    res.json({ opr:true});
   } catch (err) {
-    res.json({ message: "failure post" });
+    res.json({ opr:false });
   }
 });
 
